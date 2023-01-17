@@ -1,0 +1,250 @@
+body{
+	padding: 0;
+	margin: 0;
+	background: whitesmoke;
+	font-family: arial;
+}
+
+header{
+	background-color:#B4e551;
+	box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+
+}
+
+header ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #B4e551;
+
+}
+header li a{
+	display: block;
+	padding: 20px;
+	color: black;
+	font-size: 2em;
+	transition: color 0.25s;
+	
+	text-decoration: none;
+}
+header li a:hover{
+	color: grey;
+
+}
+header .menu{
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+}
+header .menu-icon{
+	cursor: pointer;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+}
+header .menu-icon .navicon{
+	background-color: white;
+	display: block;
+	height: 2.5px;
+	width: 20px;
+	position: relative;
+}
+header .menu-btn:checked ~ .menu-icon .navicon{
+	background: grey;
+}
+header .menu-btn:checked ~ .menu-icon .navicon::after{
+	background: grey;
+}
+header .menu-btn:checked ~ .menu-icon .navicon::before{
+	background: grey;
+}
+header .menu-icon .navicon::before,header .menu-icon .navicon::after{
+	background-color: white;
+	content: "";
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+header .menu-icon .navicon::before{
+	top: 5px;
+}
+header .menu-icon .navicon::after{
+	top: -5px;
+}
+header .menu-btn{
+	display: none;
+}
+header .logo{
+	font-size: 2em;
+	padding: 10px 20px;
+}
+header .menu-btn:checked ~ .menu{
+	max-height: 300px;
+}
+.tako{
+	width: 100%;
+	height: 75px ;
+}
+
+@media(min-width: 980px){
+	.menu-icon{
+		display: none;
+	}
+	header li{
+		float: left;
+	}
+	header .menu{
+		float: right;
+		clear: none;
+		max-height: none;
+	}
+}
+
+main{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	padding-top: 10%;
+	height: 350px;
+	margin-bottom: 20px;
+
+}
+main form{
+	width: 40%;
+	gap: 12px;
+	border-radius: 5px;
+	border: 3px solid black;
+	margin: 10px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+main form input{
+	height: 10%;
+	width: 100%;
+
+}
+main form select{
+	height: auto;
+	width: 100%;
+
+	background: white;
+	border: 1px solid grey;
+}
+table{
+	padding: 10px;
+	
+	border-collapse: collapse;
+	text-align: center;
+}
+td, th{
+	padding: 5px;
+	border: 1px solid black;
+
+}
+ table ::placeholder{
+	color: #000;
+	text-align: center;
+}
+input[name='dodaj']{
+	width: 25%;
+	height: 15%;
+	font-size:17px;
+	background: #B4e551;
+	border: 2px solid grey;
+	border-radius: 6px;
+
+}
+td img{
+	height: 100px;
+}
+.cichy{
+	display: ;
+}
+.trzymacz{
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	width: 100%
+	height:auto;
+}
+.edycja, .usun{
+border-radius: 3px;
+margin: 5px;
+border: 1px solid grey;
+width: 80%;
+height: 30px;
+	font-size: 17px;
+	background: white;
+	
+}
+.usun{
+	background: #ff4a4a;
+}
+.edycja{
+	background: #ffbc57;
+}
+
+tr input{
+border-radius: 3px;
+margin: 5px;
+border: 1px solid grey;
+width: 80%;
+height: 30px;
+}
+.file{
+	border: none;
+}
+tr select{
+border-radius: 3px;
+margin: 5px;
+border: 1px solid grey;
+width: 80%;
+height: 30px;
+background: white;
+}
+.log{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 10%;
+	width: 40%;
+	height: auto;
+	background: #d4d4d4;
+	border: 2px solid grey;
+	border-radius: 25px;
+}
+.dane::placeholder{
+	padding: 5px;
+
+}
+.dane{
+border-radius: 3px;
+margin: 5px;
+border: 1px solid grey;
+width: 80%;
+height: 30px;
+}
+.sub{
+	margin: 10px;
+	border-radius: 5px;
+	border: 2px solid black;
+width: 125px;
+height: 40px;
+}
+div.cs{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
